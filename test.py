@@ -27,7 +27,7 @@ while True:
     i = i + 1
     flag = False
     row = rows.__next__()
-    if i >= 7:
+    if i >= 473:
         break
 def iter_fill():
     j = 0
@@ -43,7 +43,7 @@ def iter_fill():
             j += 1
             if j == 1:
                 time.sleep(3)
-                idcart = ws.cell(i, 11).value
+                idcart = ws.cell(i, 10).value
                 input_text(idcart.upper(), "aab004")
                 query = driver.find_element("id", 'on_query')
                 query.click()
@@ -57,9 +57,9 @@ def iter_fill():
             #     click('/html/body/div[21]/div/div[10]/button[1]')
             #     time.sleep(1)
             if flag == False:
-                if j == 5:
+                if j == 4:
                     try:
-                        selector(22, "AAR006")
+                        selector(2, "AAR006")
                     except Exception:
                         click('/html/body/div[21]/div/div[10]/button[1]')
                         time.sleep(1)
@@ -69,56 +69,50 @@ def iter_fill():
                         time.sleep(1)
                         print(i)
                         iter_fill()
-                if j == 6:
+                if j == 5:
                     selector(groups.index(cell.value) + 1, 'AAR007')
-                if j == 9:
+                if j == 8:
                     input_text(cell.value, "aab002")
-                if j == 12:
+                if j == 11:
                     selector(1, 'aab007')
-                if j == 13:
+                if j == 12:
                     selector(4 if cell.value == '群众' else 1, 'aak033')
-                if j == 14:
+                if j == 13:
                     input_text(cell.value, 'aac017')
-                if j == 15:
+                if j == 14:
                     input_text(cell.value, 'aar012')
                     pyautogui.scroll(-300)
             elif find_poor():
                 click('/html/body/div[21]/div/div[10]/button[1]')
                 pyautogui.scroll(-300)
-            if j == 19:
+            if j == 18:
                 selector(2 if cell.value == '是' else 1, 'aac340')
-            if j == 20:
+            if j == 19:
                 selector(2 if cell.value == '是' else 1, 'aac341')
-            if j == 21:
+            if j == 20:
                 selector(2 if cell.value == '是' else 1, 'aac342')
-            if j == 22:
+            if j == 21:
                 selector(2 if cell.value == '是' else 1, 'aac091')
-            if j == 23:
+            if j == 22:
                 selector(2 if cell.value == '是' else 1, 'aac343')
-            if j == 24:
-                click('aac344')
-                input_text_byXpath('其他', '//*[@id="aac344"]/div/div[4]/div[1]/div[2]/input')
-                click('//*[@id="aac344"]/div/div[4]/div[1]/div[1]/div[2]/span')
             if j == 25:
-                input_text('液化气', 'aac345')
-            if j == 26:
                 selector(2 if cell.value == '是' else 1, 'aac318')
                 pyautogui.scroll(-300)
-            if j == 27:
+            if j == 26:
                 selector(2 if cell.value == '是' else 1, 'aac346')
-            if j == 28:
+            if j == 27:
                 selector(2 if cell.value == '是' else 1, 'aac347')
-            if j == 29:
+            if j == 28:
                 selector(2 if cell.value == '是' else 1, 'aac319')
-            if j == 30:
+            if j == 29:
                 selector(1 if cell.value == '水冲卫生厕所' else 2, 'aac348')
-            if j == 31:
+            if j == 30:
                 selector(2 if cell.value == '是' else 1, 'aac349')
-            if j == 32:
+            if j == 31:
                 selector(2 if cell.value == '是' else 1, 'aac350')
-            if j == 33:
+            if j == 32:
                 selector(2 if cell.value == '是' else 1, 'aac351')
-            if j == 34:
+            if j == 33:
                 selector(2 if cell.value == '是' else 1, 'aac352')
                 time.sleep(0.5)
                 on_save()
